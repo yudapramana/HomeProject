@@ -31,11 +31,15 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <!-- SEARCH FORM -->
       <div class="input-group input-group-sm ml-3">
-        <input class="form-control form-control-navbar" @keyup="searchit" v-model="search" type="search" placeholder="Search" aria-label="Search">
-        <div class="input-group-append">
-          <button class="btn btn-navbar" @click="search">
-            <i class="fas fa-search"></i>
-          </button>
+        <div class="form-inline">
+          <div class="input-group input-group-sm">
+            <input class="form-control form-control-navbar" @keyup="searchit" v-model="search" type="search" placeholder="Search" aria-label="Search">
+            <div class="input-group-append">
+              <button class="btn btn-navbar" @click="search">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -45,7 +49,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
+    <a href="/dashboard" class="brand-link">
       <img src="./img/logo.png" alt="HomrPRJ Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
       <span class="brand-text font-weight-light">Home Projects</span>
@@ -112,12 +116,21 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </router-link>
           </li>
           @endcan
-          
+
           <li class="nav-item">
             <router-link to="profile" class="nav-link">
               <i class="nav-icon fas fa-user orange"></i>
               <p>
                 Profile
+              </p>
+            </router-link>
+          </li>
+          
+          <li class="nav-item">
+            <router-link to="surah" class="nav-link">
+              <i class="nav-icon fa fa-book green"></i>
+              <p>
+                Surah in Alquran
               </p>
             </router-link>
           </li>
@@ -146,18 +159,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  
 
-
-    <!-- Main content -->
-    <div class="content">
-      <div class="container-fluid">
         <router-view></router-view>
         <vue-progress-bar></vue-progress-bar>
-      </div><!-- /.container-fluid -->
-    </div>
-    <!-- /.content -->
-  </div>
+
   <!-- /.content-wrapper -->
 
 

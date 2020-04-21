@@ -17,6 +17,9 @@ Vue.prototype.$gate = new Gate(window.user);
 import swal from 'sweetalert2'
 window.Swal = swal;
 
+import { VuejsDatatableFactory } from 'vuejs-datatable';
+Vue.use( VuejsDatatableFactory );
+
 const toast = Swal.mixin({
   toast: true,
   position: 'top-end',
@@ -52,6 +55,7 @@ let routes = [
     { path: '/developer', component: require('./components/DeveloperComponent.vue').default },
     { path: '/users', component: require('./components/UsersComponent.vue').default },
     { path: '/profile', component: require('./components/ProfileComponent.vue').default },
+    { path: '/surah', component: require('./components/SurahComponent.vue').default },
     { path: '/*', component: require('./components/NotFoundComponent.vue').default }
   ]
 

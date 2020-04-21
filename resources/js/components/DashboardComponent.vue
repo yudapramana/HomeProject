@@ -1,6 +1,27 @@
 <template>
-    <div class="container">
-        <div class="row mt-3">
+  <div class="content-wrapper">
+
+    <!-- Content Header -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0 text-dark">Dashboard</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Dashboard</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div> <!-- /.content-header -->
+
+    <!-- Content Body -->
+    <section class="content">
+      <div class="container">
+        <div class="row">
           <div class="col-lg-3 col-6">
             <!-- small box -->
             <div class="small-box bg-info">
@@ -62,7 +83,11 @@
           </div>
           <!-- ./col -->
         </div>
-    </div>
+          <!-- ./row -->
+      </div><!-- /.container-fluid -->
+    </section><!-- /.container-fluid -->
+
+  </div>
 </template>
 
 <script>
